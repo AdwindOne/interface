@@ -1,20 +1,10 @@
 # Uniswap Interface
 
-[![Unit Tests](https://github.com/Uniswap/uniswap-interface/actions/workflows/unit-tests.yaml/badge.svg)](https://github.com/Uniswap/uniswap-interface/actions/workflows/unit-tests.yaml)
-[![Integration Tests](https://github.com/Uniswap/uniswap-interface/actions/workflows/integration-tests.yaml/badge.svg)](https://github.com/Uniswap/uniswap-interface/actions/workflows/integration-tests.yaml)
-[![Lint](https://github.com/Uniswap/uniswap-interface/actions/workflows/lint.yml/badge.svg)](https://github.com/Uniswap/uniswap-interface/actions/workflows/lint.yml)
-[![Release](https://github.com/Uniswap/uniswap-interface/actions/workflows/release.yaml/badge.svg)](https://github.com/Uniswap/uniswap-interface/actions/workflows/release.yaml)
 
 An open source interface for Uniswap -- a protocol for decentralized exchange of Ethereum tokens.
 
-- Website: [uniswap.org](https://uniswap.org/)
-- Interface: [app.uniswap.org](https://app.uniswap.org)
-- Docs: [uniswap.org/docs/](https://uniswap.org/docs/)
-- Twitter: [@UniswapProtocol](https://twitter.com/UniswapProtocol)
-- Reddit: [/r/Uniswap](https://www.reddit.com/r/Uniswap/)
-- Email: [contact@uniswap.org](mailto:contact@uniswap.org)
-- Discord: [Uniswap](https://discord.gg/FCfyBSbCU5)
-- Whitepaper: [Link](https://hackmd.io/C-DvwDSfSxuh-Gd4WKE_ig)
+- Website: [https://adwindone.github.io/interface](https://adwindone.github.io/interface)
+
 
 ## Accessing the Uniswap Interface
 
@@ -41,6 +31,49 @@ yarn
 ```bash
 yarn start
 ```
+### Publish the Project to GitHub
+
+1. **Install gh-pages**:
+
+```bash
+   yarn add gh-pages
+```
+
+2. **Generate Frontend Code**:
+
+```bash
+   yarn build
+```
+
+3. **Modify Configuration File**: Update the homepage field in package.json to point to your GitHub Pages address:
+
+```bash
+   "homepage": "https://adwindone.github.io/interface"
+```
+
+4. **Add Deploy Script**: Add a deploy script in package.json to deploy the generated static files to GitHub Pages:
+
+```bash
+   "scripts": {
+     "deploy": "gh-pages -d build"
+   }
+```
+
+5. **Publish the Project to GitHub**:
+
+```bash
+   git add .
+   git commit -m "Publishing to GitHub Pages with Markdown and English language"
+   git push
+```
+
+6. **Deploy the Frontend Interface**:
+
+```bash
+   yarn deploy
+```
+
+After completing these steps, your page should be in Markdown style and the language should be changed to English. You can visit the link https://adwindone.github.io/interface to view the latest version of your page.
 
 ### Configuring the environment (optional)
 
